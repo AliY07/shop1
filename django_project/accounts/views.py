@@ -19,7 +19,8 @@ def first_page(request):
     rendered_page = template.render(context, request)
     return HttpResponse(rendered_page)
 
-# def first_view(request):
-#     context={}
-#     context['form']=InputForm()
-#     return render(request,"first_page.html",context)
+def products(request):
+    template = loader.get_template('shop/products.html')
+    context = {}
+    rendered_page = template.render(context, request)
+    return HttpResponse(rendered_page)
